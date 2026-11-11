@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="froldanTalleS6.Views.vEstudiante"
+             Title="vEstudiante">
+    <VerticalStackLayout>
+        <Label
+            Text="Semana 6: Servicios web - Estudiante"
+            VerticalOptions="Center"
+            FontSize="20"
+            HorizontalOptions="Center"/>
+        <ListView x:Name="listaEstudiante">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout Spacing="5" Padding="10">
+                            
+                            <Label Text="{Binding nombre}"/>
+                            <Label Text="{Binding apellido}"/>
+                            <Label Text="{Binding edad}"/>
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
