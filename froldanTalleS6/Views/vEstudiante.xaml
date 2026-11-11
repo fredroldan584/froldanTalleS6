@@ -10,15 +10,27 @@
             FontSize="20"
             HorizontalOptions="Center"/>
         <ListView x:Name="listaEstudiante">
+            
+            <!-- Encabezado -->
+
+            <ListView.Header>
+                <Grid ColumnDefinitions="80,150,150,80" Padding="10" BackgroundColor="#2F4BA0">
+                    <Label Grid.Column="0" Text="Código"   FontAttributes="Bold" TextColor="White"/>
+                    <Label Grid.Column="1" Text="Nombre"   FontAttributes="Bold" TextColor="White"/>
+                    <Label Grid.Column="2" Text="Apellido" FontAttributes="Bold" TextColor="White"/>
+                    <Label Grid.Column="3" Text="Edad"     FontAttributes="Bold" TextColor="White"/>
+                </Grid>
+            </ListView.Header>
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <HorizontalStackLayout Spacing="5" Padding="10">
-                            
-                            <Label Text="{Binding nombre}"/>
-                            <Label Text="{Binding apellido}"/>
-                            <Label Text="{Binding edad}"/>
-                        </HorizontalStackLayout>
+                        <Grid ColumnDefinitions="80,150,150,80" Padding="10">
+                            <Label Grid.Column="0" Text="{Binding codigo}"/>
+                            <Label Grid.Column="1" Text="{Binding nombre}"/>
+                            <Label Grid.Column="2" Text="{Binding apellido}"/>
+                            <Label Grid.Column="3" Text="{Binding edad}"/>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
