@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="froldanTalleS6.Views.vActualizarEliminar"
+             Title="vActualizarEliminar">
+
+    <VerticalStackLayout>
+        <Label Text="ACTUALIZAR - ELIMINAR ESTUDIANTE" FontSize="20"
+               HorizontalOptions="Center" />
+
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="*,*">
+
+            <Label Text="CODIGO" Grid.Row="0" Grid.Column="0" />
+            <Entry x:Name="txtCodigo" Grid.Row="0" Grid.Column="1" IsEnabled="False" />
+
+            <Label Text="NOMBRE" Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="APELLIDO" Grid.Row="2" Grid.Column="0" />
+            <Entry x:Name="txtapellido" Grid.Row="2" Grid.Column="1" />
+
+            <Label Text="EDAD" Grid.Row="3" Grid.Column="0" />
+            <Entry x:Name="txtEdad" Grid.Row="3" Grid.Column="1" />
+
+            <Button x:Name="btnActualizar" Text="Actualizar" Grid.Row="4" Grid.Column="0"
+                    Clicked="btnActualizar_Clicked" />
+            <Button x:Name="btnEliminar" Text="Eliminar" Grid.Row="4" Grid.Column="1"
+                    Clicked="btnEliminar_Clicked" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

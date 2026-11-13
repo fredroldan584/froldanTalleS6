@@ -9,7 +9,7 @@
             VerticalOptions="Center"
             FontSize="20"
             HorizontalOptions="Center"/>
-        <ListView x:Name="listaEstudiante">
+        <ListView x:Name="listaEstudiante" ItemSelected="listaEstudiante_ItemSelected">
             
             <!-- Encabezado -->
 
@@ -35,5 +35,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button x:Name="btnAgregar" Text="Agregar Estudiante" Margin="10"
+                Clicked="btnAgregar_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
